@@ -7,4 +7,11 @@ Simple wrapper for ```JSON.parse()``` with the option to set default data type, 
 # How to use
 ```Parser.json(stringifiedData)```  will return ```{}``` if ```stringifiedData``` can't be parsed, whereas ```Parser.json(stringifiedData, 'array')``` will return ```[]```. 
 
+The data and type settings can also be provided with an options object.
+
+```Parser.json({
+    serialized: stringifiedData,
+    type: 'array'
+})```
+
 That's all there is to it.
