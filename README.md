@@ -5,4 +5,6 @@ Simple wrapper for ```JSON.parse()``` with the option to set default data type, 
 ```npm install @krisell/parser```
 
 # How to use
-Parser.json(stringifiedData)  will return ```{}``` if ```stringifiedData``` can't be parsed, whereas ```Parser.json(stringifiedData, 'array')``` will return ```[]```. That's all there is to it.
+```Parser.json(stringifiedData)```  will return ```{}``` if ```stringifiedData``` can't be parsed, whereas ```Parser.json(stringifiedData, 'array')``` will return ```[]```. 
+
+That's all there is to it.
