@@ -9,9 +9,11 @@ Simple wrapper for ```JSON.parse()``` with the option to set default data type, 
 
 The data and type settings can also be provided with an options object.
 
-```Parser.json({
+```
+Parser.json({
     serialized: stringifiedData,
     type: 'array'
-})```
+})
+```
 
 That's all there is to it.
