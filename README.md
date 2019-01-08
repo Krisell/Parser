@@ -9,7 +9,7 @@ Simple wrapper for ```JSON.parse()``` with the option to set default data type, 
 
 The data and type settings can also be provided with an options object.
 
-```
+```JavaScript
 Parser.json({
     serialized: stringifiedData,
     type: 'array'
