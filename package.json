@@ -1,6 +1,6 @@
 {
   "name": "@krisell/parser",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Simple wrapper around JSON.parse for specifying default behaviour.",
   "main": "lib/index.js",
   "scripts": {
