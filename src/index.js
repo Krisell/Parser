@@ -4,8 +4,8 @@ const Parser = {
     json (...specs) {
         const options = OptionsHandler.build({
             specs,
-            default_options: { type: 'object' },
-            named_specs: ['seralized', 'type']
+            defaultOptions: { type: 'object' },
+            namedOptions: ['seralized', 'type']
           })
 
         function defaultValue () {
