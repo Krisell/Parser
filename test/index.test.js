@@ -58,3 +58,23 @@ test('The default value is an array if that is specified', () => {
     expect(Parser.json(null, { type: 'array' })).toEqual([])
     expect(Parser.json({ type: 'array' })).toEqual([])
 })
+
+test('Uses correct default values', () => {
+    expect(Parser.json()).toEqual({})
+    expect(Parser.json(null)).toEqual({})
+    expect(Parser.json(null, 'object')).toEqual({})
+    expect(Parser.json(null, 'array')).toEqual([])
+    expect(Parser.json({ type: 'array' })).toEqual([])
+
+    expect(Parser.json("{NOT VALID JSON[")).toEqual({})
+    expect(Parser.json("{NOT VALID JSON[", 'array')).toEqual([])
+})
+
+test('Parses JSON correctly, ignoring any default value', () => {
+    expect(Parser.json('[2,3,4]')).toEqual([2,3,4])
+    expect(Parser.json('[2,3,4]', 'object')).toEqual([2,3,4])
+    expect(Parser.json('[2,3,4]', 'array')).toEqual([2,3,4])
+    expect(Parser.json('{"a":"b","c":3}')).toEqual({ a: "b", c: 3 })
+    expect(Parser.json('{"a":"b","c":3}', 'object')).toEqual({ a: "b", c: 3 })
+    expect(Parser.json('{"a":"b","c":3}', 'array')).toEqual({ a: "b", c: 3 })
+})
