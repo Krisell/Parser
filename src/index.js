@@ -1,8 +1,8 @@
-import OptionsHandler from '@krisell/options-handler'
+import BetterArguments from '@krisell/better-arguments'
 
 const Parser = {
     json (...specs) {
-        const options = OptionsHandler.build({
+        const options = BetterArguments.build({
             specs,
             defaultOptions: { type: 'object' },
             namedOptions: ['seralized', 'type']
