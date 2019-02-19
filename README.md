@@ -1,5 +1,6 @@
 # JSON parser wrapper
-Wrapper for ```JSON.parse()``` with added error handling. Non-valid JSON (e.g. null or empty string) returns a default value which can be specified to be an object (default) or an array.
+Wrapper for ```JSON.parse()``` with added error handling. 
+Non-valid JSON (e.g. null or empty string) returns a default value which can be specified to be an object (default) or an array.
 
 # Installation
 ```npm install @krisell/parser```
